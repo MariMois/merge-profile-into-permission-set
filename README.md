@@ -6,7 +6,7 @@ A Python utility to merge Salesforce **Profile** metadata into a **Permission Se
 ✅ Merges all compatible permissions from a Profile into a Permission Set  
 ✅ Deduplicates entries  
 ✅ Cleans namespaces for a valid deployable file  
-✅ **NEW:** When a permission exists in both, the script merges them and picks the **less restrictive** option (e.g. `editable=true` if either side has it)  
+✅ When a permission exists in both, the script merges them and picks the **less restrictive** option (e.g. `editable=true` if either side has it)  
 ✅ Logs what was added, updated, or skipped  
 
 ---
@@ -44,10 +44,10 @@ This ensures the merged Permission Set is as permissive as possible without losi
 
 ## 📂 Example Log Output
 
-🔧 Merging MyProfile.profile-meta.xml (Profile) into MyPermSet.permissionset-meta.xml (PermissionSet)
-✅ MERGE <fieldPermissions>: added 5, updated 3 (less restrictive)
-✅ MERGE <userPermissions>: added 2, updated 0 (less restrictive)
-♻️ MERGE <label>: replaced with profile value
-✅ Merged file written to Merged.permissionset-meta.xml
+🔧 Merging MyProfile.profile-meta.xml (Profile) into MyPermSet.permissionset-meta.xml (PermissionSet)  
+✅ MERGE <fieldPermissions>: added 5, updated 3 (less restrictive)  
+✅ MERGE <userPermissions>: added 2, updated 0 (less restrictive)  
+♻️ MERGE <label>: replaced with profile value  
+✅ Merged file written to Merged.permissionset-meta.xml  
 
 
